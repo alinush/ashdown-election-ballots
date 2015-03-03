@@ -1,0 +1,42 @@
+\setupbodyfont[25pt]
+\setuppagenumbering[state=stop]
+\setuplayout
+  [header=0pt,
+   margin=0pt,
+   footerdistance=1cm,
+   topspace=1cm,
+   backspace=1cm,
+   cutspace=1cm,
+   width=fit,
+   % margin bottom of text to paper
+   height=\dimexpr\paperheight-\topspace+\footerheight+\footerdistance-1cm\relax]
+
+\starttext
+
+\dorecurse {500} {
+\startcolor[darkred]
+{\bf Rules:}
+\startitemize[n]
+    \startitem Circle candidate's name to vote them. \stopitem
+    \startitem One vote per candidate maximum. \stopitem
+    \startitem Vote for up to 5 candidates. \stopitem
+\stopitemize
+\stopcolor
+
+{\bf Candidates:}
+\startitemize[*,random]
+  \startitem Orpheus Chatzivasileiou \stopitem
+  \startitem Anne Collin \stopitem
+  \startitem Calvin Sun \stopitem
+  \startitem Andrew Rzeznik \stopitem
+  \startitem Jetson Leder-Luis \stopitem
+  \startitem Axel Barbara \stopitem
+  \startitem Niklas Blomberg \stopitem
+  \startitem Lisa Guay \stopitem
+  \startitem Christopher Foy \stopitem
+  \startitem Sai Gautam Gopalakrishnan \stopitem
+\stopitemize
+}
+\stoptext
+
+\stopcolumns

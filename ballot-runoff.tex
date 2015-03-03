@@ -1,0 +1,55 @@
+\setupbodyfont[23pt]
+\setuppagenumbering[state=stop]
+\setuplayout
+  [header=0pt,
+   margin=0pt,
+   footerdistance=3cm,
+   topspace=3cm,
+   backspace=3cm,
+   cutspace=3cm,
+   width=fit,
+   % margin bottom of text to paper
+   height=\dimexpr\paperheight-\topspace+\footerheight+\footerdistance-3cm\relax]
+
+\starttext
+
+\dorecurse {250} {
+  \startcolor[darkred]
+  {\bf Rules:}
+  \startitemize[n]
+      \startitem Circle {\bf only one} candidate. \stopitem
+  \stopitemize
+  \stopcolor
+  
+  {\bf Candidates:}
+  \startitemize[*,random]
+    \startitem Lisa Guay \stopitem
+    \startitem Christopher Foy \stopitem
+  \stopitemize
+  
+  % Leave some space here
+  \\
+  \\
+  \\
+  \\
+  \\
+  \\
+  
+  \startcolor[darkred]
+  {\bf Rules:}
+  \startitemize[n]
+      \startitem Circle {\bf only one} candidate. \stopitem
+  \stopitemize
+  \stopcolor
+  
+  {\bf Candidates:}
+  \startitemize[*,random]
+    \startitem Lisa Guay \stopitem
+    \startitem Christopher Foy \stopitem
+  \stopitemize
+  \page[yes]
+}
+
+\stoptext
+
+\stopcolumns
